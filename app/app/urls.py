@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from service import views as service_views
+import service
+from django.contrib.auth import views as auth_views
+
+service.title = 'SuperTravels';
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', service_views .home, name='home'),
+    path('signup/', service_views.signup, name='signup'),
+    path('login/', service_views.login, name='login'),
+    path('logout/', service_views.logout, name='logout'),
 ]
