@@ -7,12 +7,16 @@ class Resort(models.Model):
     country = models.ForeignKey('Country', on_delete=models.DO_NOTHING)
     class Meta:
         ordering = ['-id']
+    def __str__(self):
+        return self.name
 
 class Country(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
     code = models.CharField(max_length=7)
     iso_code = models.CharField(max_length=2)
+    def __str__(self):
+        return self.name
 
 class Tour(models.Model):
     id = models.AutoField(primary_key=True)
