@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'import_export',
     'api',
     'service',
     'frontend'
@@ -130,6 +131,13 @@ STATIC_ROOT = '/static/'
 LOGIN_REDIRECT_URL = '/'
 
 APP_TITLE = "Super Travel";
+
+# to disable admin
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',
+#     )
+# }
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
