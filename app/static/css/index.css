@@ -41,10 +41,10 @@ body {
 .active {
     display: block;
 }
-.slide .textContainer{
+.slide .dataContainer{
 
 }
-.slide>.container{
+.slide>.centeringContainer{
     font-size: 30px;
     width: 80%;
     margin: auto;
@@ -53,9 +53,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-.textContainer>.description{
+.dataContainer>.description{
 }
-.textContainer>.header{
+.dataContainer>.header{
     /*margin-top: unset;*/
 }
 .prevSlide.right{
