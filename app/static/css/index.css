@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+.arrowLeft {
+    transform: translateY(-50%) rotate(180deg);
+}
+.arrowRight {
+    transform: translateY(-50%);
+}
+
+.arrowContainer {
+    width: 192px;
+    height: 100vh;
+    z-index: 2;
+}
+
+.arrowContainer.left {
+    position: absolute;
+    top: 50%;
+}
+
+.arrowContainer.right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
