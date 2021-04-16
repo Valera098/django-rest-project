@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView, LoginView
 from django.shortcuts import render, redirect
 from service.forms import SignUpForm
-from app.settings import APP_TITLE
 
 def signup(request):
     if request.method == 'POST':

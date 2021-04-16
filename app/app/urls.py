@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import include, path
 from service import views as service_views
 from api import views as api_views
+from frontend import views as frontend_views
 from django.contrib.auth import views as auth_views
 from rest_framework import routers
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'resorts', api_views.ResortViewSet)
@@ -31,7 +34,8 @@ urlpatterns = [
     path('signup/', service_views.signup, name='signup'),
     path('login/', service_views.login, name='login'),
     path('logout/', service_views.logout, name='logout'),
+    path('landing/', frontend_views.landing, name='landing'),
     #api
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
