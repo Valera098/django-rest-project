@@ -1,10 +1,13 @@
 body {
     margin: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .arrowLeft {
     transform: translateY(-50%) rotate(180deg);
 }
+
 .arrowRight {
     transform: translateY(-50%);
 }
@@ -24,4 +27,28 @@ body {
     position: absolute;
     top: 50%;
     right: 0;
+}
+
+.slide {
+    display: none;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background: aliceblue;
+    text-align: center;
+    /*position: absolute;
+    top: 0;*/
+}
+
+.active {
+    display: block;
+}
+.slide>.textContainer{
+    font-size: 20px;
+    width: 80%;
+    display: inline-block;
+    margin: auto;
+}
+.textContainer>.description{
+    float: bottom;
 }
