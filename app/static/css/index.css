@@ -36,19 +36,39 @@ body {
     width: 100vw;
     background: aliceblue;
     text-align: center;
-    /*position: absolute;
-    top: 0;*/
 }
 
 .active {
     display: block;
 }
 .slide>.textContainer{
-    font-size: 20px;
+    font-size: 30px;
     width: 80%;
-    display: inline-block;
     margin: auto;
+    display: inline-grid;
+    grid-template-rows: 1fr min-content;
+    height: 100%;
 }
 .textContainer>.description{
-    float: bottom;
+}
+.textContainer>.header{
+    /*margin-top: unset;*/
+}
+.prevSlide.right{
+    animation-name: nextSlideRight;
+    animation-duration: 0.7s;
+    display: block;
+}
+.nextSlide.right{
+    animation-name: nextSlideRight;
+    animation-duration: 0.7s;
+    display: block;
+}
+@keyframes nextSlideRight {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
