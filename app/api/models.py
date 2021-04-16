@@ -17,5 +17,6 @@ class Country(models.Model):
 class Tour(models.Model):
     id = models.AutoField(primary_key=True)
     resort = models.ForeignKey('Resort', on_delete=models.DO_NOTHING)
+    description = models.TextField()
     takeoff_time = models.DateTimeField()
     end_time = models.DateTimeField()
